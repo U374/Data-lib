@@ -1,10 +1,14 @@
 [
   {
-    "title": "Article Title 1",
-    "url": "article1.html"
+    "title": "Science Articles",
+    "url": "./science.html"
   },
   {
-    "title": "Article Title 2",
-    "url": "article2.html"
+    "title": "Technology Trends",
+    "url": "./tech.html"
   },
+  {
+    "title": "History Lessons",
+    "url": "./history.html"
+  }
 ]
