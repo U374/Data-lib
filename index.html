@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Utkarsh Dubey - Student, Minecraft Enthusiast, and Creative Learner exploring new ideas and digital experiences.">
+<meta name="author" content="Utkarsh Dubey">
+
+<title>Utkarsh Dubey | Introduction</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top left, #3a2a00, #0d0d0d 60%);
+  color:white;
+  overflow:hidden;
+  position:relative;
+}
+
+/* Floating Golden Glow */
+.bg-glow{
+  position:absolute;
+  width:500px;
+  height:500px;
+  background: radial-gradient(circle, rgba(255, 200, 0, 0.18), transparent 70%);
+  filter: blur(80px);
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+@keyframes float{
+  from{ transform: translate(-80px,-60px); }
+  to{ transform: translate(80px,60px); }
+}
+
+/* Card */
+.card{
+  position:relative;
+  background: rgba(40, 30, 0, 0.65);
+  backdrop-filter: blur(18px);
+  padding:45px 35px;
+  width:360px;
+  border-radius:22px;
+  text-align:center;
+  border:1px solid rgba(255, 200, 0, 0.25);
+  box-shadow: 0 15px 40px rgba(255, 180, 0, 0.25);
+  transition:0.4s ease;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(255, 200, 0, 0.35);
+}
+
+/* Skeleton Loader */
+.skeleton{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  margin:0 auto 25px;
+  background: linear-gradient(
+    90deg,
+    #4d3a00 25%,
+    #6a5200 50%,
+    #4d3a00 75%
+  );
+  background-size:200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer{
+  0%{background-position:200% 0;}
+  100%{background-position:-200% 0;}
+}
+
+/* Profile Image */
+.profile-pic{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  display:none;
+  margin:0 auto 25px;
+  border:4px solid transparent;
+  background: linear-gradient(#000,#000) padding-box,
+              linear-gradient(45deg, gold, #FFD700) border-box;
+  transition:0.4s ease;
+}
+
+.profile-pic:hover{
+  transform: scale(1.06);
+}
+
+/* Name */
+h1{
+  font-size:24px;
+  margin-bottom:12px;
+  background: linear-gradient(90deg, #FFD700, #FFB800);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:1px;
+}
+
+/* Description */
+p{
+  font-size:14.5px;
+  line-height:1.6;
+  opacity:0.9;
+  margin-bottom:28px;
+}
+
+/* Social Icons */
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.socials a{
+  color:#FFD700;
+  font-size:22px;
+  transition:0.3s ease;
+}
+
+.socials a:hover{
+  color:#FFB800;
+  transform: translateY(-6px) scale(1.2);
+}
+</style>
+
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="card">
+
+  <div class="skeleton" id="skeleton"></div>
+
+  <img 
+    src="./img.jpg"
+    alt="Utkarsh Dubey Profile Picture"
+    class="profile-pic"
+    id="profilePic"
+  >
+
+  <h1>Utkarsh Dubey</h1>
+
+  <p>
+    Hi, I'm Utkarsh — a student and passionate Minecraft player. 
+    I enjoy grinding in SMP worlds, exploring game mechanics, and learning new things along the way.
+    While I may not be a PvP master, I believe consistency and curiosity matter more than skill alone.
+  </p>
+
+  <div class="socials">
+    <a href="https://discord.gg/4GFVWDneC7" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-discord"></i>
+    </a>
+    <a href="https://www.instagram.com/through.silenteyes/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+</div>
+
+<script>
+const img = document.getElementById("profilePic");
+const skeleton = document.getElementById("skeleton");
+
+img.onload = function(){
+  skeleton.style.display = "none";
+  img.style.display = "block";
+};
+</script>
+
+</body>
+</html>
